@@ -1,6 +1,0 @@
-> ADMINISTRADOR
-	* id_admin (obrigatorio)
-	* nome_admin (obrigatorio)
-	* usuario_admin (obrigatorio)
-	* email_admin (obrigatorio)
-	* senha_admin (obrigatorio)
