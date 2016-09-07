@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Set-2016 às 20:51
+-- Generation Time: 07-Set-2016 às 21:20
 -- Versão do servidor: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -5682,7 +5682,8 @@ CREATE TABLE `colaborador` (
 CREATE TABLE `conteudos` (
   `id_conteudo` int(10) NOT NULL,
   `titulo_conteudo` varchar(255) NOT NULL,
-  `descricao_conteudo` longtext NOT NULL
+  `descricao_conteudo` longtext NOT NULL,
+  `data_conteudo` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
