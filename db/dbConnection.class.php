@@ -7,11 +7,24 @@ require_once "config/cfStore.class.php";
  * Time: 16:14
  */
 class dbConnection extends cfStore{
-    private $user = "";
-    private $pass = "";
-    private $host = "";
-    private $database = "";
+    private $host = 'astelnorte.com.br';
+    private $dbname = 'astel196_Store';
+    private $user = 'astel196';
+    private $pass = 'kjkszpj130696';
 
+    private function Connection(){
+        $conn = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
+        return $conn;
+    }
+    public function RunQuery($sql){
+        $stm = $this->Connection()->prepare($sql);
+        return $stm->execute();
+    }
+    public function RunSelect($sql){
+        $stm = $this->Connection()->prepare($sql);
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 ?>
