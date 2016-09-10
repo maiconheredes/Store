@@ -1,6 +1,8 @@
 <?php
- require_once "db/dbConnection.class.php";
- $data = new dbConnection();
- $sql = "";
- $data->RunQuery($sql);
+ require_once "actions/aAdministrador.class.php";
+ $data = new aAdministrador();
+ $data->setIdAdmin(1);
+ $data->load();
+ $data->setEmailAdmin("maiconheredes@hotmail.com");
+ $data->update();
 ?>
